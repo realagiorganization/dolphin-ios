@@ -81,3 +81,12 @@ jobs:
             products/TrollStore.tipa
             products/Jailbroken-Rootful.deb
             products/Jailbroken-Rootless.deb
+
+      - name: Upload to TestFlight
+        if: "!github.event.release.prerelease"
+        uses: apple-actions/upload-testflight-build@v1
+        with:
+          app-path: products/Non-Jailbroken.ipa
+          issuer-id: ${{ secrets.APPSTORE_ISSUER_ID }}
+          api-key-id: ${{ secrets.APPSTORE_API_KEY_ID }}
+          api-private-key: ${{ secrets.APPSTORE_API_PRIVATE_KEY }}

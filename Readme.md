@@ -1,5 +1,8 @@
 # DolphiniOS
 
+![Build](https://github.com/realagiorganization/dolphin-ios/actions/workflows/build.yml/badge.svg)
+![Release](https://github.com/realagiorganization/dolphin-ios/actions/workflows/release.yml/badge.svg)
+
 DolphiniOS is a port of the Dolphin Emulator to iOS and iPadOS. For installation instructions and downloads, check [our website](https://dolphinios.oatmealdome.me).
 
 This is the repository for the new DolphiniOS codebase.
