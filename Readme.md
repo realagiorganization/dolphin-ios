@@ -2,10 +2,23 @@
 
 ![Build](https://github.com/realagiorganization/dolphin-ios/actions/workflows/build.yml/badge.svg)
 ![Release](https://github.com/realagiorganization/dolphin-ios/actions/workflows/release.yml/badge.svg)
+![BDD](https://github.com/realagiorganization/dolphin-ios/actions/workflows/bdd.yml/badge.svg)
+![VHS Demo](https://github.com/realagiorganization/dolphin-ios/actions/workflows/vhs-demo.yml/badge.svg)
+![Website Screenshot](https://github.com/realagiorganization/dolphin-ios/actions/workflows/website-screenshot.yml/badge.svg)
 
 DolphiniOS is a port of the Dolphin Emulator to iOS and iPadOS. For installation instructions and downloads, check [our website](https://dolphinios.oatmealdome.me).
 
 This is the repository for the new DolphiniOS codebase.
+
+## QA Artifacts
+
+BDD console walkthrough (generated via VHS action):
+
+![BDD Console Demo](docs/assets/bdd-demo.gif)
+
+UI testing preview:
+
+![UI Testing](docs/assets/ui-testing.gif)
 
 ## Building
 

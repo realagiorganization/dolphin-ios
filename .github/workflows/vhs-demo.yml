@@ -1,0 +1,23 @@
+name: VHS Demo
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ master ]
+
+jobs:
+  record:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Ensure asset directory
+        run: mkdir -p docs/assets
+      - name: Render BDD console demo
+        uses: charmbracelet/vhs-action@v2
+        with:
+          path: scripts/vhs/bdd_demo.tape
+      - name: Upload demo GIF
+        uses: actions/upload-artifact@v4
+        with:
+          name: bdd-demo-gif
+          path: docs/assets/bdd-demo.gif
