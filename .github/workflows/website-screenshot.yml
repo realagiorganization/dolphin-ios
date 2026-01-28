@@ -1,0 +1,25 @@
+name: Website Screenshot
+
+on:
+  workflow_dispatch:
+
+jobs:
+  capture:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install Playwright
+        run: |
+          python -m pip install --upgrade pip
+          pip install playwright
+          playwright install --with-deps chromium
+      - name: Capture GitHub Pages screenshot
+        run: python3 scripts/web/screenshot_github_pages.py
+      - name: Upload screenshot
+        uses: actions/upload-artifact@v4
+        with:
+          name: github-pages-screenshot
+          path: docs/website_screenshots/github-pages.png
